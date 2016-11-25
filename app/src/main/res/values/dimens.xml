@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_search">20sp</dimen>
+    <dimen name="text_size_currency_short_name">24sp</dimen>
+    <dimen name="text_size_currency_full_name">12sp</dimen>
+    <dimen name="margin_right_blue_dot">5dp</dimen>
+    <dimen name="margin_left_country_name">10dp</dimen>
+    <dimen name="height_search_bar">56dp</dimen>
+    <dimen name="text_size_title">20dp</dimen>
+    <dimen name="padding_currency_item">20dp</dimen>
+    <dimen name="size_country_flag">56dp</dimen>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.antran.canandroidtest.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:elevation="0dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/cur_currency_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/chevron_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+        <ImageView
+            android:id="@+id/country_flag"
+            android:layout_width="@dimen/size_country_flag"
+            android:layout_height="@dimen/size_country_flag"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/chevron_down" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/country_flag"
+            android:layout_marginLeft="@dimen/margin_left_country_name"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/currency_shortname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_currency_short_name" />
+
+            <TextView
+                android:id="@+id/currency_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phillipin"
+                android:textSize="@dimen/text_size_currency_full_name" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.antran.canandroidtest.ui.widget.SearchBar
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_search_bar"
+        android:layout_below="@+id/cur_currency_content"></com.antran.canandroidtest.ui.widget.SearchBar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/currency_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:background="@color/gray"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
